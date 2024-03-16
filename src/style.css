@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+  body {
+    @apply bg-dark-1 text-secondary;
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
+  }
+}
+
+ 
+@font-face {
+  font-family: 'aqlam';
+  src: url('/src/assets/fonts/aqlam.ttf') format('truetype');
+  
+}
+
+.font-aqlam {
+  font-family: 'aqlam', sans-serif;
+}
+
+
+
+@font-face {
+  font-family: 'uthmanic_hafs_v22';
+  src: url('/src/assets/fonts/uthmanic_hafs_v22.ttf') format('truetype');
+  
+}
+
+.font-uthmanicHafs {
+  font-family: 'uthmanic_hafs_v22', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Cairo', sans-serif;
+}
