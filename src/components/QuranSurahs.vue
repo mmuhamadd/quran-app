@@ -39,7 +39,7 @@ export default {
 	computed: {
 		computedSurahs(){
 			/* get surahs */
-			axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json')
+			axios.get('https://api.npoint.io/159a45954aea743ebb47')
 			.then(res => {
 				this.surahs = res.data
 			})
