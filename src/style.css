@@ -18,27 +18,17 @@
   }
 }
 
- 
-@font-face {
-  font-family: 'aqlam';
-  src: url('https://github.com/mmuhamadd/quran-app/blob/main/src/assets/fonts/aqlam.ttf') format('truetype');
-  
+
+.font-uthmanicHafs {
+  font-family: "Amiri Quran", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .font-aqlam {
-  font-family: 'aqlam', sans-serif;
-}
-
-
-
-@font-face {
-  font-family: 'uthmanic_hafs_v22';
-  src: url('https://github.com/mmuhamadd/quran-app/blob/main/src/assets/fonts/uthmanic_hafs_v22.ttf') format('truetype');
-  
-}
-
-.font-uthmanicHafs {
-  font-family: 'uthmanic_hafs_v22', sans-serif;
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 h1,h2,h3,h4,h5,h6 {
