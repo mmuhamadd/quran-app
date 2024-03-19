@@ -133,7 +133,7 @@ export default {
   },
   mounted(){
   	const currentReciter = this.$route.params.reciter
-  	axios.get('../../src/json/reciters.json').then((res)=>{
+  	axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/reciters.json').then((res)=>{
   		/* loop through reciters */
 	  	 res.data.forEach((reciter)=>{reciter
 	  		if(reciter.id === currentReciter) this.currentReciter = reciter // set new 
@@ -141,7 +141,7 @@ export default {
   	})
 
   	/* fetch all surahs */
-  	axios.get('../../src/json/quran.json')
+  	axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json')
   	.then((res)=>{
   		this.surah = res.data.filter(surah => surah.id === Number(this.currentSurah))
   		  	this.surah = this.surah[0]
