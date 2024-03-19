@@ -26,7 +26,7 @@
                 </div>
                 <div class="flex items-center justify-center gap-5 flex-col">
                     <h1 v-if="surah.id != 1 & verse === 0" class="font-uthmanicHafs text-center font-bold text-white text-2xl">بسم الله الرحمن الرحيم</h1>
-                    <p id="ayah" class="text-center text-white 
+                    <p id="ayah" class="text-center mb-5 text-white 
 				 			text-4xl rtl flex items-center 
 				 			justify-center w-full p-5 gap-2
 				 			flex-wrap
