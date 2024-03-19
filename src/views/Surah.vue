@@ -104,7 +104,7 @@ export default {
   		axios.get(url)
   		.then(res => {
   			console.log(res.data)
-  			this.tafseer = res.data.text
+  			this.tafseer = res.data.result
   		})
   	},
 	  playSurah: function(){
