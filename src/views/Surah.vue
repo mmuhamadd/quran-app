@@ -96,16 +96,18 @@ export default {
   		if(this.verse != lastIndex) this.verse = this.verse + 1;
   		this.getTafseer()
   	},
-  	getTafseer: function(){
-  		const url = `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${this.$route.params.id}`
-  		console.log(url)
-  		axios.get(url)
-  		.then(res => {
-  			console.log(res.data)
-  			data = res.data
-  			this.tafseer = data.result
-  		})
-  	},
+getTafseer: function(){
+    const url = `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${this.$route.params.id}`
+    axios.get(url)
+    .then(res => {
+        console.log(res.data);
+        this.tafseer = res.data.result; // Set tafseer data
+    })
+    .catch(error => {
+        console.error("Error fetching tafseer:", error);
+    });
+},
+
 	  playSurah: function(){
 	  			/* get the audio */
 	  		let id = this.currentReciter.audioId
