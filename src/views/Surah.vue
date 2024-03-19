@@ -1,7 +1,7 @@
 <template>
 	<div class="surah-container">
 		 <div>
-			 <h1 class="text-center text-6xl text-white font-extrabold font-uthmanicHafs">سورة {{ surah.name }}</h1>
+			 <h1 class="text-center text-6xl text-white font-extrabold font-aqlam">سورة {{ surah.name }}</h1>
 			 <div class="flex items-center justify-center gap-2 mt-2">
 			 	<p>النوع : {{ surah.type === 'meccan' ? 'مكية' : 'مدنية' }}</p>
 			 	|
@@ -50,7 +50,7 @@
 						</svg>
 				 			<small>التفسير الميسر</small>
 			 			</h2>
-			 			<p>sh</p>
+			 			<p>{{ tafser[verse].translation }}</p>
 			 		</div>
 			 	</div>
 
