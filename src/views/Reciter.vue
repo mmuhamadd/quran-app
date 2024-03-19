@@ -29,7 +29,7 @@ export default {
 	},
 	mounted(){
 		const reciterId = this.$route.params.name;
-		axios.get("../src/json/reciters.json")
+		axios.get("https://github.com/mmuhamadd/quran-app/blob/main/src/json/reciters.json")
 		.then((res)=>{
 			const reciters = res.data;
 			reciters.forEach((reciter)=>{
