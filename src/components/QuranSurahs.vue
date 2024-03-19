@@ -39,7 +39,7 @@ export default {
 	computed: {
 		computedSurahs(){
 			/* get surahs */
-			axios.get('../src/json/quran.json')
+			axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json')
 			.then(res => {
 				this.surahs = res.data
 			})
