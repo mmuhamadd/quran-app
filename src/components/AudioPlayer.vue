@@ -3,8 +3,7 @@
 	class="flex bottom-0 fixed rtl
 	w-screen h-fit bg-dark-2 p-2 items-center justify-between">
 		<img class="rounded-2xl" 
-		:src="`../../src/assets/reciters/
-		${recite.picture}`" width="45">
+		:src="recite.picture" width="45">
 		<div class="flex items-center justify-center flex-col text-center">
 			<h5 class="font-bold text-white">سورة {{ recite.surah }}</h5>
 			<p>بصوت  القارئ {{ recite.name }}</p>
