@@ -136,7 +136,6 @@ export default {
     },
     mounted() {
     	this.getSurahInfo()
-        const currentReciter = this.$route.params.reciter
 const currentReciter = this.$route.params.reciter;
 axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa').then((res) => {
     /* loop through reciters */
