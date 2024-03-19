@@ -137,13 +137,17 @@ export default {
     mounted() {
     	this.getSurahInfo()
         const currentReciter = this.$route.params.reciter
-        axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa').then((res) => {
-            /* loop through reciters */
-            res.data.forEach((reciter) => {
-                reciter
-                if (reciter.id === currentReciter) this.currentReciter = reciter // set new 
-            });
-        })
+const currentReciter = this.$route.params.reciter;
+axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa').then((res) => {
+    /* loop through reciters */
+    res.data.forEach((reciter) => {
+        if (reciter.id === currentReciter) {
+            this.currentReciter = reciter; // set new 
+            return; // exit the loop once found
+        }
+    });
+});
+
 
         /* fetch all surahs */
         axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
