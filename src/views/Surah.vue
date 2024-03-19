@@ -89,25 +89,11 @@ export default {
   	prevVerse: function(){
   		// if the verse is not the first allready
   		if(this.verse != 0) this.verse = this.verse - 1;
-  		this.getTafseer() 
   	},
   	nextVerse: function(){
   		const lastIndex = this.verses.length - 1
   		if(this.verse != lastIndex) this.verse = this.verse + 1;
-  		this.getTafseer()
   	},
-getTafseer: function(){
-    const url = `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${this.$route.params.id}`
-    axios.get(url)
-    .then(res => {
-        console.log(res.data);
-        this.tafseer = res.data.result; // Set tafseer data
-    })
-    .catch(error => {
-        console.error("Error fetching tafseer:", error);
-    });
-},
-
 	  playSurah: function(){
 	  			/* get the audio */
 	  		let id = this.currentReciter.audioId
@@ -147,8 +133,6 @@ getTafseer: function(){
   		this.surah = res.data.filter(surah => surah.id === Number(this.currentSurah))
   		  	this.surah = this.surah[0]
   	})
-
-  	this.getTafseer()
 
   	window.addEventListener('keypress',e => {
   		if(e.key === 'a') {
