@@ -1,6 +1,6 @@
 <template>
 	<div class="surah-container">
-		 <div v-if="surah">
+		 <div>
 			 <h1 class="text-center text-6xl text-white font-extrabold font-uthmanicHafs">سورة {{ surah.name }}</h1>
 			 <div class="flex items-center justify-center gap-2 mt-2">
 			 	<p>النوع : {{ surah.type === 'meccan' ? 'مكية' : 'مدنية' }}</p>
@@ -89,10 +89,22 @@ export default {
   	prevVerse: function(){
   		// if the verse is not the first allready
   		if(this.verse != 0) this.verse = this.verse - 1;
+  		this.getTafseer() 
   	},
   	nextVerse: function(){
   		const lastIndex = this.verses.length - 1
   		if(this.verse != lastIndex) this.verse = this.verse + 1;
+  		this.getTafseer()
+  	},
+  	getTafseer: function(){
+  		const url = `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${this.$route.params.id}`
+  		console.log(url)
+  		axios.get(url)
+  		.then(res => {
+  			console.log(res.data)
+  			data = res.data
+  			this.tafseer = data.result
+  		})
   	},
 	  playSurah: function(){
 	  			/* get the audio */
@@ -133,6 +145,8 @@ export default {
   		this.surah = res.data.filter(surah => surah.id === Number(this.currentSurah))
   		  	this.surah = this.surah[0]
   	})
+
+  	this.getTafseer()
 
   	window.addEventListener('keypress',e => {
   		if(e.key === 'a') {
