@@ -133,7 +133,7 @@ export default {
   },
   mounted(){
   	const currentReciter = this.$route.params.reciter
-  	axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/reciters.json').then((res)=>{
+  	axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa').then((res)=>{
   		/* loop through reciters */
 	  	 res.data.forEach((reciter)=>{reciter
 	  		if(reciter.id === currentReciter) this.currentReciter = reciter // set new 
