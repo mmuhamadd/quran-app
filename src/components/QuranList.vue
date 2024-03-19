@@ -26,7 +26,7 @@ export default {
 	},
 	mounted(){
 		const reciterId = this.$route.params.name;
-		axios.get("../src/json/surahsInfo.json")
+		axios.get("https://github.com/mmuhamadd/quran-app/blob/main/src/json/surahsInfo.json")
 		.then((res)=>{
 			this.surahs = res.data;
 		})
