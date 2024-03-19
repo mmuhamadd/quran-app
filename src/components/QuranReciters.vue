@@ -5,7 +5,7 @@
     </h1>
     <div class="flex flex-wrap gap-5 mt-5">
       <router-link v-for="reciter in getReciters" :to="`/reciter/${reciter.id}`" :key="reciter.id" class="p-3 w-[47%] lg:w-[31%] bg-dark-2 rounded-2xl cursor-pointer flex items-center justify-between shadow shadow-2xl">
-        <img :src="`./src/assets/reciters/${reciter.picture}`" width="80" height="80" class="rounded-2xl object-cover h-[80px]" loading="lazy" 
+        <img :src="`${reciter.picture}`" width="80" height="80" class="rounded-2xl object-cover h-[80px]" loading="lazy" 
         :alt="reciter.name" :title="reciter.name">
         <p class="text-white font-medium">{{ reciter.name }}</p>
       </router-link>
