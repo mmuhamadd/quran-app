@@ -21,7 +21,7 @@ const store = createStore({
             return state.currentReciter
         },
         getQuran(state) {
-            axios.get("https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json")
+            axios.get("https://api.npoint.io/159a45954aea743ebb47")
                 .then((res) => {
                     state.quran = res
                     return state.quran
@@ -39,7 +39,7 @@ const store = createStore({
     },
     actions: {
         fetchReciters({ commit }) {
-            axios.get("https://github.com/mmuhamadd/quran-app/blob/main/src/json/reciters.json")
+            axios.get("https://api.npoint.io/ac6dbed26cf75d0dccaa")
                 .then((res) => {
                     commit('setRiciters', res.data)
                 })
