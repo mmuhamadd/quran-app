@@ -52,7 +52,7 @@
 						</svg>
 				 			<small>التفسير الميسر</small>
 			 			</h2>
-			 			<p>{{ tafseer }}</p>
+			 			<p>{{ tafseer[verse] }}</p>
 			 		</div>
 			 	</div>
 
@@ -99,7 +99,7 @@ export default {
   		this.getTafseer()
   	},
   	getTafseer: function(){
-  		const url = `http://api.quran-tafseer.com/tafseer/1/${this.$route.params.id}/${this.verse + 1}`
+  		const url = `https://quranenc.com/api/v1/translation/sura/arabic_moyassar/${this.$route.params.id}`
   		console.log(url)
   		axios.get(url)
   		.then(res => {
