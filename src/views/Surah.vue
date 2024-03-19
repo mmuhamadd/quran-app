@@ -1,7 +1,7 @@
 <template>
     <div class="surah-container">
         <div v-if="surah">
-            <h1 class="text-center text-6xl text-white font-extrabold font-uthmanicHafs">سورة {{ surah.name_arabic }}</h1>
+            <h1 class="text-center text-6xl text-white font-extrabold font-aqlam">سورة {{ surah.name_arabic }}</h1>
             <div class="flex items-center justify-center gap-2 mt-2">
                 <p>EN: {{ surah.translated_name.name }}</p>
                 |
