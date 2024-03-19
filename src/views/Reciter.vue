@@ -2,7 +2,7 @@
 	<div class="rtl" v-if="reciter != null">
 		<div class="p-5">
 			<div class="flex float-right items-end  justify-center gap-2">
-				<img :src="'${reciter.picture}'" :title="reciter.name" :alt="reciter.name" class="rounded object-cover" width="170" height="170">
+				<img :src="${reciter.picture}" :title="reciter.name" :alt="reciter.name" class="rounded object-cover" width="170" height="170">
 				<div>
 					<h1 class="text-right lg:text-3xl text-2xl pb-3 font-extrabold text-white">-{{ reciter.name }}</h1>
 					<p class="text-right">{{ reciter.brief }}</p>
