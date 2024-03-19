@@ -67,7 +67,7 @@ export default {
 			this.inputValue = ''		
 		},
 		searchForSurah: function(query){
-			axios.get('../src/json/quran.json')
+			axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json')
 			.then(res => {
 				const surahs = res.data 
 				this.surahs = surahs.filter(surah => surah.name.includes(query))
