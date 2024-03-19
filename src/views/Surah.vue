@@ -81,28 +81,46 @@ export default {
                     console.log(this.surah)
                 })
         },
-        prevVerse: function() {
-            // if the verse is not the first allready
-            if (this.verse != 0) this.verse = this.verse - 1;
-            this.getTafseer();
-            this.verseId++;
-            /* fetch all surahs */
-            axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
-                .then((res) => {
-                    this.verse = res.data
-                })
-        },
+prevVerse: function() {
+    // Decrement the verseId
+    if (this.verseId > 1) {
+        this.verseId--;
+
+        // Fetch the previous verse
+        axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
+            .then((res) => {
+                // Update the current verse
+                this.verse = res.data;
+            })
+            .catch((error) => {
+                console.error('Error fetching previous verse:', error);
+            });
+
+        // Fetch Tafseer for the previous verse
+        this.getTafseer();
+    } else {
+        console.log('Already at the first verse');
+    }
+},
+
         nextVerse: function() {
-            const lastIndex = this.verses.length - 1
-            if (this.verse != lastIndex) this.verse = this.verse + 1;
-            this.getTafseer();
-            this.verseId++;
-            /* fetch all surahs */
-            axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
-                .then((res) => {
-                    this.verse = res.data
-                })
-        },
+    // Increment the verseId
+    this.verseId++;
+
+    // Fetch the next verse
+    axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
+        .then((res) => {
+            // Update the current verse
+            this.verse = res.data;
+        })
+        .catch((error) => {
+            console.error('Error fetching next verse:', error);
+        });
+
+    // Fetch Tafseer for the next verse
+    this.getTafseer();
+},
+
         getTafseer: function() {
             const url = `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/${this.$route.params.id}/${this.verseId}.json`
             axios.get(url)
