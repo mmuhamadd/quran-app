@@ -50,7 +50,7 @@
 						</svg>
 				 			<small>التفسير الميسر</small>
 			 			</h2>
-			 			<p>{{ tafser[verse].translation }}</p>
+			 			<p>{{ 1 + 1 }}</p>
 			 		</div>
 			 	</div>
 
@@ -101,8 +101,8 @@ export default {
   		console.log(url)
   		axios.get(url)
   		.then(res => {
-  			console.log(res.data)
   			this.tafseer = res.data.result
+			console.log(this.tafseer)
   		})
   	},
 	  playSurah: function(){
