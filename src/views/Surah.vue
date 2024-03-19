@@ -141,7 +141,7 @@ export default {
   	})
 
   	/* fetch all surahs */
-  	axios.get('https://github.com/mmuhamadd/quran-app/blob/main/src/json/quran.json')
+  	axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa')
   	.then((res)=>{
   		this.surah = res.data.filter(surah => surah.id === Number(this.currentSurah))
   		  	this.surah = this.surah[0]
