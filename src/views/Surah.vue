@@ -50,7 +50,7 @@
 						</svg>
 				 			<small>التفسير الميسر</small>
 			 			</h2>
-			 			<p>{{  tafseer[0] }}</p>
+			 			<p>{{  tafseer[verse].translation }}</p>
 			 		</div>
 			 	</div>
 
