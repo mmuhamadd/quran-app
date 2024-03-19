@@ -21,7 +21,7 @@
  
 @font-face {
   font-family: 'aqlam';
-  src: url('/src/assets/fonts/aqlam.ttf') format('truetype');
+  src: url('https://github.com/mmuhamadd/quran-app/blob/main/src/assets/fonts/aqlam.ttf') format('truetype');
   
 }
 
@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: 'uthmanic_hafs_v22';
-  src: url('/src/assets/fonts/uthmanic_hafs_v22.ttf') format('truetype');
+  src: url('https://github.com/mmuhamadd/quran-app/blob/main/src/assets/fonts/uthmanic_hafs_v22.ttf') format('truetype');
   
 }
 
