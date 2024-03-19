@@ -2,7 +2,7 @@
     <footer v-if="isHomePage" class="bg-gray-100 dark:bg-gray-900">
         <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="flex justify-center text-teal-600 dark:text-teal-300">
-               <img src="@/assets/logo.webp">
+               <img src="https://github.com/mmuhamadd/quran-app/blob/main/src/assets/logo.webp">
             </div>
             <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
                 موقع غير ربحي لقراءة وسماع القراءن الكريم.
