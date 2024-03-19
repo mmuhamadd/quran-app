@@ -139,7 +139,7 @@ export default {
   	})
 
   	/* fetch all surahs */
-  	axios.get('https://api.npoint.io/ac6dbed26cf75d0dccaa')
+  	axios.get('https://api.npoint.io/159a45954aea743ebb47')
   	.then((res)=>{
   		this.surah = res.data.filter(surah => surah.id === Number(this.currentSurah))
   		  	this.surah = this.surah[0]
