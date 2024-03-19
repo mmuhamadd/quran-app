@@ -1,7 +1,7 @@
 <template>
 	<nav id="navbar" dir="rtl" class="p-5">
 		<router-link to="/">
-			<img width="80" src="@/assets/logo.webp">
+			<img width="80" src="https://github.com/mmuhamadd/quran-app/blob/main/src/assets/logo.webp">
 		</router-link>
 	</nav>
 </template>
