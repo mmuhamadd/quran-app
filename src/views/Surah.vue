@@ -38,7 +38,7 @@
 				 		  </p>			 				 			
 			 	</div>
 
-			 	<div class="flex items-center justify-center gap-5 flex-col">
+			 	<div class="flex items-center justify-center gap-5 flex-col mt-5">
 			 		<div class="w-[60%] text-xl 
 			 		text-center opacity-60 hover:opacity-80 bg-[#F5DD61] 
 			 		p-1 rounded text-black
